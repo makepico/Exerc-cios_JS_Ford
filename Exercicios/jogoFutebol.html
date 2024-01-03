@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var time1 = (prompt("Infome o nome do primeiro time"))
+        var time2 = (prompt("Infome o nome do segundo time"))
+        var pontosTime1 = (prompt(`Informe os gols feitos por ${time1}`))
+        var pontosTime2 = (prompt(`Informe os gols feitos por ${time2}`))
+
+        if (pontosTime1 > pontosTime2) {
+            alert(`O resultado do jogo é ${pontosTime1}x${pontosTime2} para ${time1}`)
+        }
+        else if (pontosTime2 > pontosTime1) {
+            alert(`O resultado do jogo é ${pontosTime2}x${pontosTime1} para ${time2}`)
+        }
+        else if (pontosTime1 == pontosTime2)
+        alert(`O jogo terminou em empate de ${pontosTime2}x${pontosTime1}`)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var pop = (prompt("Forneça o número de habitantes"))
+        const nascimentos = (prompt("Forneça o número de nascimentos"))
+        const mortes = (prompt("Forneça o número de óbitos"))
+        const escolha = Number(prompt(`Escolha uma das opções:
+        
+        1- Calculo taxa de natalidade
+        2- Calculo taxa de mortalidade
+        3- Calculo crescimento vegetativo
+        `))
+
+        switch (escolha) {
+
+            case 1:
+                var taxaNasc = ((nascimentos * 1000) / pop).toFixed(2)
+                alert(`A taxa de natalidade é de ${taxa}%`)
+                break;
+            
+            case 2:
+                var taxaMort = ((mortes * 1000) / pop).toFixed(2)
+                alert(`A taxa de mortalidade é de ${taxa}%`)
+                break;
+
+            case 3:
+                cresc = taxaNasc - taxaMort
+                alert(`O crescimento vegetativo é de ${cresc}%`)
+
+            default:
+                alert("Digite um número válido!")
+        }
+
+        alert(`A taxa de ${tipo} é igual a ${taxa}%`)
+
+    </script>
+</body>
+</html>
