@@ -8,6 +8,29 @@
 <body>
     <script>
         
+
+        var produto = (prompt("Digite o nome do produto que deseja comprar"))
+        var preco = Number(prompt("Digite o preço do produto"))
+        var qtde = Number(prompt("Digite a quantidade comprada"))
+        var desconto
+        var total = qtde * preco
+
+
+        if (qtde <= 5) {
+            desconto = total * 0.02
+            total = total - desconto
+        }
+        else if (qtde > 5 && qtde <= 10) {
+            desconto = total * 0.03
+            total = total - desconto
+        }
+        else if (qtde > 10) {
+            desconto = total * 0.05
+            total = total - desconto
+        }
+
+        alert(`O total da compra de ${qtde} ${produto}s é de R$${total} com desconto de R$${desconto}`)
+
     </script>
 </body>
 </html>

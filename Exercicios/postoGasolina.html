@@ -8,6 +8,73 @@
 <body>
     <script>
         
+        var escolha = Number(prompt(`Escolha uma das opções:
+        G - gasolina
+        A - álcool`))
+
+        var litro = Number(prompt("Informe a quantidade de litros a ser abastecido"))
+        var total
+        var desconto
+
+        switch (escolha) {
+            case "G":
+            
+            total = litro * 5.3
+            if (litro <= 20 ) {
+                desconto = total * 0.04
+                total = (total - desconto).toFixed(2)
+                alert(
+                `--------RECIBO--------
+                G
+                ${litro} Litros
+                desconto de 4%
+                Total: R$${total}
+                ----------------------`)
+                }
+                else if (litro > 20){
+                    desconto = total * 0.06
+                total = (total - desconto).toFixed(2)
+                alert(
+                `--------RECIBO--------
+                G
+                ${litro} Litros
+                desconto de 6%
+                Total: R$${total}
+                ----------------------`)
+                }
+            break;
+
+            case "A":
+            total = litro * 4.9
+            if (litro <= 20 ) {
+                desconto = total * 0.03
+                total = (total - desconto).toFixed(2)
+                alert(
+                `--------RECIBO--------
+                A
+                ${litro} Litros
+                desconto de 3%
+                Total: R$${total}
+                ----------------------`)
+                }
+                else if (litro > 20) {
+                    desconto = total * 0.05
+                total = (total - desconto).toFixed(2)
+                alert(
+                `--------RECIBO--------
+                A
+                ${litro} Litros
+                desconto de 5%
+                Total: R$${total}
+                ----------------------`)
+                }
+            break;
+
+            default:
+                alert("Insira um número válido")
+            break;
+        }
+
     </script>
 </body>
 </html>

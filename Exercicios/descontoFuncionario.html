@@ -7,7 +7,44 @@
 </head>
 <body>
     <script>
+
+        var cliente = (prompt(`Olá! Você é cliente VIP ou funcionário?
+        1- Sou cliente comum
+        2- Sou cliente VIP
+        3- Sou funcionário`))
         
+        var preco = Number(prompt("Informe o preço da compra"))
+        var desconto
+        var total 
+
+        switch (cliente) {
+
+            case 1:
+                desconto = 0 * preco
+                total = preco - desconto
+                alert(`O cliente não terá desconto em sua compra, com um total de R$${total}`)
+                break;
+
+            case 2:
+                desconto = 0.05 * preco
+                total = preco - desconto
+                alert(`O cliente VIP terá desconto de 5% (R$${desconto}), com um total de R$${total}`)
+                break;
+            
+            case 3:
+                desconto = 0.10 * preco
+                total = preco - desconto
+                alert(`O cliente VIP terá desconto de 10% (R$${desconto}), com um total de R$${total}`)
+                break;
+            
+            default:
+                alert("Insira um valor válido!")
+                break;
+        }
+
+
+
+
     </script>
 </body>
 </html>
